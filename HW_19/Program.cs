@@ -1,16 +1,15 @@
-﻿// Is number palindrome or not
-int n, r, sum = 0, temp; // n = number, r = right symbol of the number, sum = mirror of the number, temp = temporal integer
-Console.Writeline("Enter the Number: ");
-n = Convert.ToInt32(Console.Readline());
+﻿// If number is palindrome or not
+int n, r, sum = 0, temp;                        // n = number, r = right symbol of the number, sum = mirror of the number, temp = temporal integer
+Console.Write("Enter the Number: ");
+n = Convert.ToInt32(Console.ReadLine());
 temp = n;
 while (n > 0)
 {
-    r = n % 10; // finding the right symbol
-    sum = (sum * 10) + r; // assembling the mirror
-    n = n / 10; // cutting the right symbol
+    r = n % 10;                                 // finding the right symbol
+    sum = (sum * 10) + r;                       // assembling the mirror
+    n = n / 10;                                 // cutting the right symbol
 }
-if (temp == sum)
-Console.Writeline("Number is Palindrome");
-else 
-Console.Writeline("Number is not Palindrome");
-
+if (temp == sum)                                // compare mirror to original 
+    Console.Write(sum + " is Palindrome");
+else
+    Console.Write(sum + " is not Palindrome");
