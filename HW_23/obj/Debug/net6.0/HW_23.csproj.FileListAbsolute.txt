@@ -1,0 +1,15 @@
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\bin\Debug\net6.0\HW_23.exe
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\bin\Debug\net6.0\HW_23.deps.json
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\bin\Debug\net6.0\HW_23.runtimeconfig.json
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\bin\Debug\net6.0\HW_23.dll
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\bin\Debug\net6.0\HW_23.pdb
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.csproj.AssemblyReference.cache
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.AssemblyInfoInputs.cache
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.AssemblyInfo.cs
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.csproj.CoreCompileInputs.cache
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.dll
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\refint\HW_23.dll
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.pdb
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\HW_23.genruntimeconfig.cache
+C:\Users\NikEli\Desktop\GeekBrains\Homework\Workshop\HW_23\obj\Debug\net6.0\ref\HW_23.dll
