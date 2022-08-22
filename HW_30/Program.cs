@@ -2,7 +2,7 @@
 
 for (int i = 0; i < 8; i++)
 {
-arr[i] = new Random().Next(0, 2); // generate array of 0 and 1 randomly ordered
+arr[i] = new Random().Next(2); // generate array of 0 and 1 randomly ordered // *no need to id starting point if it is zero (0, 2) = (2)
 Console.Write(arr[i] + " ");
 }
 
