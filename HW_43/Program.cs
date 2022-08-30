@@ -2,23 +2,18 @@
 // заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-double b1, k1, b2, k2;
-Console.WriteLine("Enter the b1: "); b1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Enter the k1: "); k1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Enter the b2: "); b2 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Enter the k2: "); k2 = Convert.ToDouble(Console.ReadLine());
+string[] F = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+double b1 = double.Parse(F[0]);
+double k1 = double.Parse(F[1]);
+double b2 = double.Parse(F[2]);
+double k2 = double.Parse(F[3]);
 
-Console.Write($"{b1}, {k1}, {b2}, {k2}");
+Console.WriteLine(String.Join(" ", GetPoint(b1, k1, b2, k2)));
 
-double[] getPoint = {b1, k1, b2, k2};
-
-double[] CrossPoint(double a, double b, double c, double d)
+double[] GetPoint(double A, double B, double C, double D)
 {
     double[] result = new double[2];
-    result[0] = (c - a)/(b - d);
-    result[1] = b * result[0] + a;
+    result[0] = (C - A) / (B - D);
+    result[1] = B * result[0] + A;
     return result;
-
 }
-
-Console.WriteLine(CrossPoint(b1, k1, b2, k2));
