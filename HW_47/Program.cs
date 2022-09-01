@@ -22,7 +22,7 @@ double[,] getArray(int m, int n)
     {
         for(int j = 0; j < n; j++)
         {
-            result[i, j] = new Random().NextDouble() * 10;
+            result[i, j] = new Random().NextDouble() * (10);
         }
     }
     return result;
@@ -34,7 +34,7 @@ void PrintArray(double[,] inArray)
     {
         for(int j = 0; j < inArray.GetLength(1); j++)
         {
-            Console.Write($"{inArray[i, j]} ");
+            Console.Write($"{inArray[i, j]:f2} ");
         }
         Console.WriteLine();
     }
