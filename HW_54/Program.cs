@@ -18,7 +18,10 @@ for (int i = 0; i < array.GetLength(0); i++) // Generate random array
     }
 }
 
-//From max to min variance
+PrintArray(array);
+SelectionSort(array);
+Console.WriteLine();
+PrintArray(array);
 
 void SelectionSort(int[,] array)
 {
@@ -30,12 +33,24 @@ void SelectionSort(int[,] array)
 
             for (int j = i + 1; j < array.GetLength(1); j++)
             {
-                if (array[k, j] > array[k, maxPosition]) maxPosition = j; 
+                if (array[k, j] > array[k, maxPosition]) maxPosition = j;
             }
 
             int temp = array[k, i];
             array[k, i] = array[k, maxPosition];
             array[k, maxPosition] = temp;
         }
+    }
+}
+
+void PrintArray(int[,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            Console.Write($"{inArray[i, j]} ");
+        }
+        Console.WriteLine();
     }
 }
