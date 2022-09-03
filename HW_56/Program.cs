@@ -9,14 +9,28 @@
 
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-int[,] array = new int[3, 5];
+Console.Clear();
 
-for (int i = 0; i < array.GetLength(0); i++) // Generate random array
+Console.Write("Enter number of rows: ");
+int rows = int.Parse(Console.ReadLine());
+Console.Write("Enter number of columns: ");
+int columns = int.Parse(Console.ReadLine());
+int[,] Array = GetArray(rows, columns, 0, 10);
+PrintArray(Array);
+
+Console.WriteLine($"Row with minimal sum of all elements is {GetRowNumber(Array)}");
+
+int[,] GetArray(int m, int n, int min, int max)
 {
-    for (int j = 0; j < array.GetLength(1); j++)
+    int[,] result = new int[m, n];
+    for(int i = 0; i < m; i++)
     {
-        array[i, j] = new Random().Next(0, 9);
+        for(int j = 0; j < n; j++)
+        {
+            result[i, j] = new Random().Next(min, max + 1);
+        }
     }
+    return result;
 }
 
 void PrintArray(int[,] inArray)
@@ -31,23 +45,131 @@ void PrintArray(int[,] inArray)
     }
 }
 
-PrintArray(array);
-
-int rowSum = 0;
-int rowSum1 = 0;
-for (int i = 0; i < array.GetLength(0) + 2; i++)
+int GetRowNumber(int [,] array)
 {
-    rowSum += array[0, i];
-    for(int j = i + 1; j < array.GetLength(0) + 2; i++)
-    {       
-        {
+    int row = 0;
+    int minsum = 0;
+    for(int i = 0; i < array.GetLength(1); i++)
+    {
+        minsum += array[0, i];
+    }
 
+    for(int i = 1; i < array.GetLength(0); i++)
+    {
+        int sum = 0;
+        for(int j = 0; j < array.GetLength(1); j++)
+        {
+            sum += array[i, j];
+        }
+        if(minsum > sum)
+        {
+            minsum = sum;
+            row = i;
         }
     }
+    return row;
 }
-Console.WriteLine(rowSum);
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  // Create random array
+
+// int[] CreateRandomArray(int N, int start, int end)
+// {
+// int[] RandomArray = new int[N];
+// for (int i = 0; i < N; i++)
+// {
+// RandomArray[i] = new Random().Next(start, end + 1);
+// }
+// return RandomArray;
+// }
+
+// // Create array manually
+
+// int[] CreateArray()
+// {
+// Console.WriteLine("Введите количество элементов массива");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[size];
+// for (int i = 0; i < size; i++)
+// {
+// Console.WriteLine($"Введите {i+1} элемент массива");
+// array[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// return array;
+// }
+
+// // Output array
+
+// void ShowArray(int[] array)
+// {
+// for (int i = 0; i < array.Length; i++)
+// {
+// Console.Write(array[i] + " ");
+// }
+// Console.WriteLine();
+// }
+
+// // Get array from string
+
+// int[] GetArrayFromString(string stringArray)
+// {
+//     string[] numS = stringArray.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+//     int[] result = new int[numS.Length];
+//     for(int i = 0; i < result.Length; i++)
+//     {
+//         result[i] = int.Parse(numS[i]);
+//     }
+//     return result;
+
+// }
+
+// // Program example
+
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов в массиве");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число случайно генерируемого диапазона");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите последнее число случайно генерируемого диапазона");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myRandomArray = CreateRandomArray(num, min, max);
+// ShowArray(myRandomArray);
+// Console.WriteLine("-------");
+// int[] myArray = CreateArray();
+// ShowArray(myArray);
+
+// // Another one method to output an array
+
+// Console.WriteLine($"[{String.Join(", ", myArray)}]");
+
+// // Split and Replace function
+
+// string text = "(1,2) (2,3) (4,5) (6,7)"
+//                 .Replace("(", "")
+//                 .Replace(")", "")
+//                 ;
+// var data = text.Split(" ")
+
+//                 .ToArray();
+
+// for(int i = 0; i < data.Length; i++)
+// {
+//     Console.WriteLine(data[i]);
+// }
