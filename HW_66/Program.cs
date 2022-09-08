@@ -8,12 +8,10 @@ int M = int.Parse(Console.ReadLine());
 Console.Write("Введите N: ");
 int N = int.Parse(Console.ReadLine());
 
-PrintNumbers(M, N);
+Console.WriteLine($"Сумма натуральных элементов от {M} до {N} равна {SumNumbers(M, N)}");
 
-int PrintNumbers(int x, int y)
+int SumNumbers(int x, int y)
 {
-    int sum = 0;
-    if (sum == y) return sum;
-    sum += x;
-    PrintNumbers(1, y);
+    if (x == y) return x;
+    return x + SumNumbers(x + 1, y);
 }
